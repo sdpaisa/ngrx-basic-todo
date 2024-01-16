@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
 import { TodoComponent } from './todo/todo.component';
 
 import { StoreModule } from '@ngrx/store';
-import { todosReducer } from './state';
+import { todosReducer, todosStateFeatureKey } from './state';
 
 @NgModule({
   declarations: [TodosComponent, AddTodoComponent, TodoComponent],
-  imports: [CommonModule, ReactiveFormsModule, StoreModule.forFeature('todoState', todosReducer)],
+  imports: [CommonModule, ReactiveFormsModule, StoreModule.forFeature('todosStateFeatureKey', todosReducer)],
   exports: [TodosComponent],
 })
 export class TodosModule {}
